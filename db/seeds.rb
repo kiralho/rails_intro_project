@@ -9,9 +9,10 @@
 require 'json'
 require 'pp'
 
-SubBreed.delete_all
-Breed.delete_all
-Store.delete_all
+Deal.destroy_all
+SubBreed.destroy_all
+Breed.destroy_all
+Store.destroy_all
 
 
 json = File.read('datajson.json')
@@ -29,3 +30,4 @@ end
   store = Store.new(name: Faker::BossaNova.unique.artist, address: Faker::Address.unique.street_address)
   store.save()
 end
+

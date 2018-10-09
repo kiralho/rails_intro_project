@@ -2,10 +2,10 @@
 
 one:
   price: 1.5
+  store: one
   breed: one
-  stores: one
 
 two:
   price: 1.5
+  store: two
   breed: two
-  stores: two

@@ -1,4 +1,5 @@
 class Deal < ApplicationRecord
+  belongs_to :store
   belongs_to :breed
-  belongs_to :stores
+  validates :price, numericality: true
 end
