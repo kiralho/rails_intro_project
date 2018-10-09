@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  price: 1.5
+  breed: one
+  stores: one
+
+two:
+  price: 1.5
+  breed: two
+  stores: two
