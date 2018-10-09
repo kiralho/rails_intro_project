@@ -7,3 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 require 'json'
+
+json = File.read('datajson.json')
+parsed_json = JSON.parse(json)
+
