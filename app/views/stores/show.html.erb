@@ -1,2 +1,18 @@
-<h1>Stores#show</h1>
-<p>Find me in app/views/stores/show.html.erb</p>
+<h1>Dogs & Deals</h1>
+<%= render "shared/menu" %>
+<%= render "shared/nav" %>
+<h2>Information about the store:</h2>
+<ul>
+  <li>Store name: <%= @store.name %></li>
+  <li>Location: <%= @store.address %></li>
+<ul>
+<h2>Current deals:</h2>
+<p>(click on the name to check sub-breeds and other deals)</p>
+<ul>
+  <% @deals.each do |deal| %>
+  <% breedid = '../breed/' + deal.breed.id.to_s %>
+    <li>Breed name: <%= link_to deal.breed.name.capitalize!, breedid %></li>
+    <li>Price: <%= deal.price %></li>
+    <br/>
+  <% end %>
+</ul>

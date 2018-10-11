@@ -1,2 +1,9 @@
-<h1>Stores#index</h1>
-<p>Find me in app/views/stores/index.html.erb</p>
+<h1>Dogs & Deals</h1>
+<%= render "shared/menu" %>
+<%= render "shared/nav" %>
+<h2>List of all the stores:</h2>
+<ul>
+  <% @stores.each do |store| %>
+  <li>Store name: <%= link_to store.name, store %></li>
+  <% end %>
+</ul>

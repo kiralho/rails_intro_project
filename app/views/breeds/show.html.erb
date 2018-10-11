@@ -17,7 +17,8 @@
   <h2>See here the locations where you can find this breed and how much is the price:</h2>
   <ul>
     <% @deals.each do |deal| %>
-      <li>Store name: <%= deal.store.name %></li>
+      <% storeid = '../store/' + deal.store.id.to_s %>
+      <li>Store name: <%= link_to deal.store.name, storeid %></li>
       <li>Location: <%= deal.store.address %></li>
       <li>Price: $<%= deal.price %></li>
       <br/>
