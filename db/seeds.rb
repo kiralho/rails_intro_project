@@ -31,3 +31,11 @@ end
   store.save()
 end
 
+all_breeds = Breed.all
+all_stores = Store.all
+
+all_stores.each do |store|
+  10.times do
+    new_deal = Deal.create(price: Faker::Commerce.price, breed: all_breeds.sample, store:store)
+  end
+end
