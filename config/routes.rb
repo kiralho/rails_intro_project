@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'search/results'
   resources :breeds, only: [:index, :show]
   resources :stores, only: [:index, :show]
   get 'store/:id', to: 'stores#show'

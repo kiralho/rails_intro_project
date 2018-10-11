@@ -5,14 +5,15 @@
 <ul>
   <li>Store name: <%= @store.name %></li>
   <li>Location: <%= @store.address %></li>
-<ul>
+</ul>
 <h2>Current deals:</h2>
 <p>(click on the name to check sub-breeds and other deals)</p>
-<ul>
+
   <% @deals.each do |deal| %>
+  <ul>
   <% breedid = '../breed/' + deal.breed.id.to_s %>
     <li>Breed name: <%= link_to deal.breed.name.capitalize!, breedid %></li>
     <li>Price: <%= deal.price %></li>
-    <br/>
-  <% end %>
-</ul>
+  </ul>
+<% end %>
+

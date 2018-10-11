@@ -2,7 +2,7 @@
 <%= render "shared/menu" %>
 <%= render "shared/nav" %>
 <% if @sub_breeds.empty? %>
-  <h2>The breed <%= @breeds.name.capitalize! %> doesn't have any sub-breeds!<h2>
+  <h2>The breed <%= @breeds.name.capitalize! %> doesn't have any sub-breeds!</h2>
 <% else %>
   <h2>Here are the sub-breeds of the breed <%= @breeds.name.capitalize! %>
   <ul>
@@ -15,14 +15,14 @@
 <h2>Unfortunately there are no dogs of this breed for sale!</h2>
 <% else %>
   <h2>See here the locations where you can find this breed and how much is the price:</h2>
-  <ul>
     <% @deals.each do |deal| %>
+      <ul>
       <% storeid = '../store/' + deal.store.id.to_s %>
       <li>Store name: <%= link_to deal.store.name, storeid %></li>
       <li>Location: <%= deal.store.address %></li>
       <li>Price: $<%= deal.price %></li>
-      <br/>
+      </ul>
     <% end %>
-  </ul>
+
   <p>All sub-breeds are available if the breed has one.</p>
 <% end %>
